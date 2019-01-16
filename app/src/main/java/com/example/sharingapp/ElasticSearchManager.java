@@ -38,6 +38,10 @@ public class ElasticSearchManager {
     private static final String BID_TYPE = "bids";
     private static JestDroidClient client;
 
+
+    /**
+     * Retrieves all bids from remote server
+     */
     public static class GetBidListTask extends AsyncTask<Void,Void,ArrayList<Bid>> {
 
         @Override
@@ -66,7 +70,7 @@ public class ElasticSearchManager {
     }
 
     /**
-     * Add item to remote server
+     * Add bid to remote server
      */
     public static class AddBidTask extends AsyncTask<Bid,Void,Boolean> {
 
@@ -96,6 +100,9 @@ public class ElasticSearchManager {
         }
     }
 
+    /**
+     * Remove bid from remote server
+     */
     public static class RemoveBidTask extends AsyncTask<Bid,Void,Boolean> {
 
         @Override
